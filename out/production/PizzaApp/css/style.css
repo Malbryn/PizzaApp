@@ -1,0 +1,82 @@
+* {
+    -fx-font-family: 'Raleway Regular';
+    -fx-alignment: center;
+    -fx-text-fill: #fff;
+}
+
+#container {
+    -fx-background: #333945;
+    -fx-pref-width: 1000px;
+    -fx-padding: 75px;
+    -fx-spacing: 20px;
+}
+
+#title {
+    -fx-font-size: 42px;
+}
+
+#title_2 {
+    -fx-font-size: 28px;
+}
+
+.buttons {
+    -fx-spacing: 20px;
+}
+
+.button {
+    -fx-pref-width: 225px;
+    -fx-border-radius: 6px;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-color: #fff;
+    -fx-background-color: none;
+    -fx-text-fill: #fff;
+    -fx-fill-width: true;
+    -fx-cursor: hand;
+    -fx-padding: 10px 10px 10px 10px;
+    -fx-font-size: 20px;
+}
+
+.box_column {
+    -fx-alignment: top-left;
+    -fx-padding: 15px;
+}
+
+#style,
+#size,
+#type,
+#extra,
+#cart {
+    -fx-font-size: 20px;
+    -fx-padding: 0px 0px 10px 0px;
+}
+
+RadioButton {
+    -fx-padding: 3px;
+    -fx-font-size: 13px;
+}
+
+CheckBox {
+    -fx-padding: 3px;
+    -fx-font-size: 13px;
+}
+
+.box_rows {
+    -fx-padding: 15px;
+}
+
+GridPane > Label {
+    -fx-padding: 5px;
+    -fx-font-size: 16px;
+}
+
+GridPane > TextField {
+    -fx-text-fill: #000;
+    -fx-alignment: center-right;
+    -fx-pref-width: 250px;
+}
+
+#timestamp {
+    -fx-font-size: 20px;
+    -fx-fill: #fff;
+}

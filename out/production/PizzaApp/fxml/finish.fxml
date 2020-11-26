@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox stylesheets="/css/style.css"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sample.controllers.Finish"
+      fx:id="container">
+    <children>
+        <Label fx:id="title" text="Köszönjük a rendelést!"/>
+        <Label fx:id="title_2" text="Várható kiszállítás: "/>
+        <Text fx:id="timestamp" text="9999.99.99. 99:99"/>
+        <Button text="Kezdőképernyő" onAction="#switchToHomeScreen"/>
+    </children>
+</VBox>
