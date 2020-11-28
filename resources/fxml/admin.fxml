@@ -9,8 +9,8 @@
       fx:controller="sample.controllers.Admin"
       fx:id="container">
     <children>
-        <Label fx:id="title_2" text="Aktív megrendelések:"/>
-        <ListView fx:id="current_orders"/>
-        <Button text="Kezdőképernyő" onAction="#switchToHomeScreen"/>
+        <Label fx:id="title2" text="Aktív megrendelések:"/>
+        <ListView fx:id="currentOrders"/>
+        <Button fx:id="btnHome" text="Kezdőképernyő" onAction="#handleHomePage"/>
     </children>
 </VBox>

@@ -9,11 +9,11 @@
       fx:controller="sample.controllers.Home"
       fx:id="container">
     <children>
-        <Label fx:id="title" text="Üdvözlünk!"/>
+        <Label fx:id="title1" text="Üdvözlünk!"/>
         <VBox styleClass="buttons">
             <children>
-                <Button text="Rendelés" onAction="#handleOrderPage"/>
-                <Button text="Aktív rendelések" onAction="#handleAdminPage"/>
+                <Button fx:id="btnSelect" text="Rendelés" onAction="#handleSelectPage"/>
+                <Button fx:id="btnAdmin" text="Aktív rendelések" onAction="#handleAdminPage"/>
             </children>
         </VBox>
     </children>

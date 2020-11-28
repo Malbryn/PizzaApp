@@ -14,37 +14,37 @@
       fx:controller="sample.controllers.Select"
       fx:id="container">
     <children>
-        <Label fx:id="title" text="Pizza kiválasztása"/>
-        <HBox styleClass="box_row">
+        <Label fx:id="title1" text="Pizza kiválasztása"/>
+        <HBox styleClass="boxRows">
             <children>
-                <VBox styleClass="box_column">
+                <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="style" text="Tészta"/>
-                        <RadioButton fx:id="style_thin" text="Vékony tészta"/>
-                        <RadioButton fx:id="style_thick" text="Vastag tészta"/>
-                        <RadioButton fx:id="style_stuffed" text="Sajttal töltött"/>
+                        <RadioButton fx:id="styleThin" text="Vékony tészta"/>
+                        <RadioButton fx:id="styleThick" text="Vastag tészta"/>
+                        <RadioButton fx:id="styleStuffed" text="Sajttal töltött"/>
                     </children>
                 </VBox>
-                <VBox styleClass="box_column">
+                <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="size" text="Méret"/>
-                        <RadioButton fx:id="size_small" text="Kicsi"/>
-                        <RadioButton fx:id="size_medium" text="Közepes"/>
-                        <RadioButton fx:id="size_large" text="Nagy"/>
+                        <RadioButton fx:id="sizeSmall" text="Kicsi"/>
+                        <RadioButton fx:id="sizeMedium" text="Közepes"/>
+                        <RadioButton fx:id="sizeLarge" text="Nagy"/>
                     </children>
                 </VBox>
-                <VBox styleClass="box_column">
+                <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="type" text="Típus"/>
-                        <RadioButton fx:id="type_margherita" text="Margaréta"/>
-                        <RadioButton fx:id="type_pepperoni" text="Szalámis"/>
-                        <RadioButton fx:id="type_meat" text="Húsimádó"/>
-                        <RadioButton fx:id="type_bbq" text="BBQ"/>
-                        <RadioButton fx:id="type_hawaiian" text="Hawaii"/>
-                        <RadioButton fx:id="type_mushroom" text="Gombás"/>
+                        <RadioButton fx:id="typeMargherita" text="Margaréta"/>
+                        <RadioButton fx:id="typePepperoni" text="Szalámis"/>
+                        <RadioButton fx:id="typeMeat" text="Húsimádó"/>
+                        <RadioButton fx:id="typeBBQ" text="BBQ"/>
+                        <RadioButton fx:id="typeHawaiian" text="Hawaii"/>
+                        <RadioButton fx:id="typeMushroom" text="Gombás"/>
                     </children>
                 </VBox>
-                <VBox styleClass="box_column">
+                <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="extra" text="Extra feltét"/>
                         <CheckBox fx:id="extra_pepperoni" text="Szalámi"/>
@@ -57,16 +57,16 @@
                 </VBox>
             </children>
         </HBox>
-        <VBox styleClass="box_column">
+        <VBox styleClass="boxColumn">
             <children>
                 <Label fx:id="cart" text="Kosár:"/>
-                <ListView fx:id="cart_items"/>
+                <ListView fx:id="cartItems"/>
             </children>
         </VBox>
         <HBox styleClass="buttons">
             <children>
-                <Button text="Kosárhoz hozzáad" onAction="#addToCart"/>
-                <Button text="Tovább" onAction="#nextScene"/>
+                <Button fx:id="btnCart" text="Kosárhoz hozzáad" onAction="#addToCart"/>
+                <Button fx:id="btnOrder" text="Tovább" onAction="#handleOrderPage"/>
             </children>
         </HBox>
     </children>

@@ -10,9 +10,9 @@
       fx:controller="sample.controllers.Finish"
       fx:id="container">
     <children>
-        <Label fx:id="title" text="Köszönjük a rendelést!"/>
-        <Label fx:id="title_2" text="Várható kiszállítás: "/>
-        <Text fx:id="timestamp" text="9999.99.99. 99:99"/>
-        <Button text="Kezdőképernyő" onAction="#switchToHomeScreen"/>
+        <Label fx:id="title1" text="Köszönjük a rendelést!"/>
+        <Label fx:id="title2" text="Várható kiszállítás: "/>
+        <Text fx:id="timestamp" text="-"/>
+        <Button fx:id="btnHome" text="Kezdőképernyő" onAction="#handleHomePage"/>
     </children>
 </VBox>

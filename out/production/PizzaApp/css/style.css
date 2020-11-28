@@ -11,12 +11,16 @@
     -fx-spacing: 20px;
 }
 
-#title {
+#title1 {
     -fx-font-size: 42px;
 }
 
-#title_2 {
+#title2 {
     -fx-font-size: 28px;
+}
+
+ListView {
+    -fx-fill: #000;
 }
 
 .buttons {
@@ -37,7 +41,7 @@
     -fx-font-size: 20px;
 }
 
-.box_column {
+.boxColumn {
     -fx-alignment: top-left;
     -fx-padding: 15px;
 }
@@ -61,7 +65,7 @@ CheckBox {
     -fx-font-size: 13px;
 }
 
-.box_rows {
+.boxRows {
     -fx-padding: 15px;
 }
 
