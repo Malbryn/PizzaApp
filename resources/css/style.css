@@ -42,6 +42,11 @@
     -fx-padding: 15px;
 }
 
+.total > Text {
+    -fx-fill: #fff;
+    -fx-font-size: 14px;
+}
+
 #style,
 #size,
 #type,

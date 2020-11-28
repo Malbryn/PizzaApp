@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Home {
     @FXML
-    Button btnSelect, btnAdmin;
+    private Button btnSelect, btnAdmin;
 
     public void handleSelectPage(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/select.fxml"));

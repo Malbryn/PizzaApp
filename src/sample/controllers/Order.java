@@ -16,10 +16,10 @@ import java.util.Arrays;
 
 public class Order {
     @FXML
-    Button btnFinish;
+    private Button btnFinish;
     @FXML
-    TextField inputName, inputZipCode, inputCity, inputStreet, inputHouseNumber, inputPhonenumber;
-    Cart cart;
+    private TextField inputName, inputZipCode, inputCity, inputStreet, inputHouseNumber, inputPhonenumber;
+    private Cart cart;
 
     public boolean handleFinishPage(ActionEvent actionEvent) throws IOException {
         ArrayList<TextField> inputFields = new ArrayList<TextField>(
@@ -49,8 +49,12 @@ public class Order {
         System.out.println(this.cart);
         System.out.println(newCustomer.toString());
 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/finish.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/finish.fxml"));
+        Parent root = (Parent) loader.load();
+        Finish controller = loader.<Finish>getController();
+        controller.setDeliveryTimeText();
         btnFinish.getScene().setRoot(root);
+
         return true;
     }
 

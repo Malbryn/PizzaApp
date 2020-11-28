@@ -13,6 +13,7 @@
 <?import sample.model.PizzaType?>
 <?import sample.model.PizzaExtra?>
 
+<?import javafx.scene.text.Text?>
 <VBox stylesheets="/css/style.css"
       xmlns="http://javafx.com/javafx/8"
       xmlns:fx="http://javafx.com/fxml"
@@ -145,7 +146,7 @@
         </HBox>
         <VBox styleClass="boxColumn">
             <children>
-                <Label fx:id="cart" text="Kosár:"/>
+                <Label text="Kosár:"/>
                 <ListView fx:id="itemList"/>
             </children>
         </VBox>
@@ -153,6 +154,13 @@
             <children>
                 <Button fx:id="btnCart" text="Kosárhoz hozzáad" onAction="#addToCart"/>
                 <Button fx:id="btnOrder" text="Tovább" onAction="#handleOrderPage"/>
+            </children>
+        </HBox>
+        <HBox styleClass="total">
+            <children>
+                <Text text="Összesen: "/>
+                <Text fx:id="total" text="0"/>
+                <Text text="Ft"/>
             </children>
         </HBox>
     </children>

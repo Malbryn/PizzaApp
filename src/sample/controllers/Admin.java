@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Admin {
     @FXML
-    Button btnHome;
+    private Button btnHome;
 
     public void handleHomePage(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));

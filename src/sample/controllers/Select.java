@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 import sample.MessageBox;
 import sample.model.*;
 
@@ -15,21 +16,23 @@ import java.util.Arrays;
 
 public class Select {
     @FXML
-    Button btnCart, btnOrder;
+    private Button btnCart, btnOrder;
     @FXML
-    RadioButton styleThin, styleThick, styleStuffed;
+    private RadioButton styleThin, styleThick, styleStuffed;
     @FXML
-    RadioButton sizeSmall, sizeMedium, sizeLarge;
+    private RadioButton sizeSmall, sizeMedium, sizeLarge;
     @FXML
-    RadioButton typeMargherita, typePepperoni, typeMeat, typeBBQ, typeHawaiian, typeMushroom;
+    private RadioButton typeMargherita, typePepperoni, typeMeat, typeBBQ, typeHawaiian, typeMushroom;
     @FXML
-    CheckBox extraPepperoni, extraBacon, extraOlives, extraHam, extraCheese, extraOnion;
+    private CheckBox extraPepperoni, extraBacon, extraOlives, extraHam, extraCheese, extraOnion;
     @FXML
-    ToggleGroup groupStyle, groupSize, groupType;
+    private ToggleGroup groupStyle, groupSize, groupType;
     @FXML
-    ListView itemList;
+    private ListView itemList;
+    @FXML
+    private Text total;
 
-    Cart cart = new Cart();
+    private Cart cart = new Cart();
 
     public boolean addToCart(ActionEvent actionEvent) {
         if (groupStyle.getSelectedToggle() == null) {
@@ -50,6 +53,8 @@ public class Select {
         Pizza newPizza = createPizza();
         itemList.getItems().add(newPizza.toString());
         cart.addOrder(newPizza);
+
+        this.total.setText(Integer.toString(cart.getTotal()));
 
         return true;
     }
