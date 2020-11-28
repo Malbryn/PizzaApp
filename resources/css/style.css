@@ -1,14 +1,14 @@
 * {
     -fx-font-family: 'Raleway Regular';
     -fx-alignment: center;
-    -fx-text-fill: #fff;
 }
 
 #container {
     -fx-background: #333945;
-    -fx-pref-width: 1000px;
-    -fx-padding: 75px;
-    -fx-spacing: 20px;
+    -fx-pref-width: 800px;
+    -fx-pref-height: 600px;
+    -fx-padding: 40px;
+    -fx-spacing: 15px;
 }
 
 #title1 {
@@ -17,10 +17,6 @@
 
 #title2 {
     -fx-font-size: 28px;
-}
-
-ListView {
-    -fx-fill: #000;
 }
 
 .buttons {
@@ -83,4 +79,9 @@ GridPane > TextField {
 #timestamp {
     -fx-font-size: 20px;
     -fx-fill: #fff;
+}
+
+ListView {
+    -fx-text-fill: #000;
+    -fx-font-size: 14px;
 }

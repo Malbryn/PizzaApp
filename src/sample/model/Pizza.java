@@ -19,6 +19,7 @@ public class Pizza {
 
     private int calculatePrice() {
         // price = type * size + extra
+
         int basePrice = this.type.getPrice();
         double sizeCoeff = this.size.getPriceCoeff();
         int extra = 0;
@@ -34,5 +35,22 @@ public class Pizza {
 
     public int getPrice() {
         return this.price;
+    }
+
+    @Override
+    public String toString() {
+        String toppings = "";
+
+        for (PizzaExtra e : this.extraToppings) {
+            toppings += e.getName() + ", ";
+        }
+
+        toppings = toppings.replaceAll(", $", "");
+
+        return this.price + "Ft - " +
+                this.style.getName() + " tésztás " +
+                this.type.getName() + " pizza (" +
+                this.size.getSize() + "cm) " +
+                (toppings == "" ? "" : "+ extra: " + toppings);
     }
 }

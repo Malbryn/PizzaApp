@@ -7,6 +7,11 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import sample.model.PizzaStyle?>
+<?import sample.model.PizzaSize?>
+<?import sample.model.PizzaType?>
+<?import sample.model.PizzaExtra?>
 
 <VBox stylesheets="/css/style.css"
       xmlns="http://javafx.com/javafx/8"
@@ -20,39 +25,120 @@
                 <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="style" text="Tészta"/>
-                        <RadioButton fx:id="styleThin" text="Vékony tészta"/>
-                        <RadioButton fx:id="styleThick" text="Vastag tészta"/>
-                        <RadioButton fx:id="styleStuffed" text="Sajttal töltött"/>
+                        <fx:define>
+                            <ToggleGroup fx:id="groupStyle"/>
+                        </fx:define>
+                        <RadioButton fx:id="styleThin" toggleGroup="$groupStyle" text="Vékony tészta">
+                            <userData>
+                                <PizzaStyle fx:constant="THIN"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="styleThick" toggleGroup="$groupStyle" text="Vastag tészta">
+                            <userData>
+                                <PizzaStyle fx:constant="THICK"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="styleStuffed" toggleGroup="$groupStyle" text="Sajttal töltött">
+                            <userData>
+                                <PizzaStyle fx:constant="STUFFED_CRUST"/>
+                            </userData>
+                        </RadioButton>
                     </children>
                 </VBox>
                 <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="size" text="Méret"/>
-                        <RadioButton fx:id="sizeSmall" text="Kicsi"/>
-                        <RadioButton fx:id="sizeMedium" text="Közepes"/>
-                        <RadioButton fx:id="sizeLarge" text="Nagy"/>
+                        <fx:define>
+                            <ToggleGroup fx:id="groupSize"/>
+                        </fx:define>
+                        <RadioButton fx:id="sizeSmall" toggleGroup="$groupSize" text="Kicsi">
+                            <userData>
+                                <PizzaSize fx:constant="SMALL"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="sizeMedium" toggleGroup="$groupSize" text="Közepes">
+                            <userData>
+                                <PizzaSize fx:constant="MEDIUM"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="sizeLarge" toggleGroup="$groupSize" text="Nagy">
+                            <userData>
+                                <PizzaSize fx:constant="LARGE"/>
+                            </userData>
+                        </RadioButton>
                     </children>
                 </VBox>
                 <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="type" text="Típus"/>
-                        <RadioButton fx:id="typeMargherita" text="Margaréta"/>
-                        <RadioButton fx:id="typePepperoni" text="Szalámis"/>
-                        <RadioButton fx:id="typeMeat" text="Húsimádó"/>
-                        <RadioButton fx:id="typeBBQ" text="BBQ"/>
-                        <RadioButton fx:id="typeHawaiian" text="Hawaii"/>
-                        <RadioButton fx:id="typeMushroom" text="Gombás"/>
+                        <fx:define>
+                            <ToggleGroup fx:id="groupType"/>
+                        </fx:define>
+                        <RadioButton fx:id="typeMargherita" toggleGroup="$groupType" text="Margaréta">
+                            <userData>
+                                <PizzaType fx:constant="MARGHERITA"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="typePepperoni" toggleGroup="$groupType" text="Szalámis">
+                            <userData>
+                                <PizzaType fx:constant="PEPPERONI"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="typeMeat" toggleGroup="$groupType" text="Húsimádó">
+                            <userData>
+                                <PizzaType fx:constant="MEAT"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="typeBBQ" toggleGroup="$groupType" text="BBQ">
+                            <userData>
+                                <PizzaType fx:constant="BBQ"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="typeHawaiian" toggleGroup="$groupType" text="Hawaii">
+                            <userData>
+                                <PizzaType fx:constant="HAWAIIAN"/>
+                            </userData>
+                        </RadioButton>
+                        <RadioButton fx:id="typeMushroom" toggleGroup="$groupType" text="Gombás">
+                            <userData>
+                                <PizzaType fx:constant="MUSHROOM"/>
+                            </userData>
+                        </RadioButton>
                     </children>
                 </VBox>
                 <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="extra" text="Extra feltét"/>
-                        <CheckBox fx:id="extra_pepperoni" text="Szalámi"/>
-                        <CheckBox fx:id="extra_bacon" text="Bacon"/>
-                        <CheckBox fx:id="extra_olives" text="Olívabogyó"/>
-                        <CheckBox fx:id="extra_ham" text="Sonka"/>
-                        <CheckBox fx:id="extra_cheese" text="Sajt"/>
-                        <CheckBox fx:id="extra_onion" text="Hagyma"/>
+                        <CheckBox fx:id="extraPepperoni" text="Szalámi">
+                            <userData>
+                                <PizzaExtra fx:constant="PEPPERONI"/>
+                            </userData>
+                        </CheckBox>
+                        <CheckBox fx:id="extraBacon" text="Bacon">
+                            <userData>
+                                <PizzaExtra fx:constant="BACON"/>
+                            </userData>
+                        </CheckBox>
+                        <CheckBox fx:id="extraOlives" text="Olívabogyó">
+                            <userData>
+                                <PizzaExtra fx:constant="OLIVES"/>
+                            </userData>
+                        </CheckBox>
+                        <CheckBox fx:id="extraHam" text="Sonka">
+                            <userData>
+                                <PizzaExtra fx:constant="HAM"/>
+                            </userData>
+                        </CheckBox>
+                        <CheckBox fx:id="extraCheese" text="Sajt">
+                            <userData>
+                                <PizzaExtra fx:constant="CHEESE"/>
+                            </userData>
+                        </CheckBox>
+                        <CheckBox fx:id="extraOnion" text="Hagyma">
+                            <userData>
+                                <PizzaExtra fx:constant="ONION"/>
+                            </userData>
+                        </CheckBox>
                     </children>
                 </VBox>
             </children>

@@ -18,9 +18,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         Font.loadFont(getClass().getResource("/font/Raleway-Regular.ttf").toExternalForm(), 10);
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
-        primaryStage.setScene(new Scene(root, 750, 500));
-        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.setTitle("Pizza App");
+
         primaryStage.show();
+
+        primaryStage.setMinWidth(primaryStage.getWidth());
+        primaryStage.setMinHeight(primaryStage.getHeight());
     }
 }
