@@ -5,15 +5,66 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import sample.MessageBox;
+import sample.model.Cart;
+import sample.model.Customer;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Order {
     @FXML
     Button btnFinish;
+    @FXML
+    TextField inputName, inputZipCode, inputCity, inputStreet, inputHouseNumber, inputPhonenumber;
+    Cart cart;
 
-    public void handleFinishPage(ActionEvent actionEvent) throws IOException {
+    public boolean handleFinishPage(ActionEvent actionEvent) throws IOException {
+        ArrayList<TextField> inputFields = new ArrayList<TextField>(
+                Arrays.asList(inputName, inputZipCode, inputCity, inputStreet, inputHouseNumber, inputPhonenumber)
+        );
+
+        for (TextField f : inputFields) {
+            if (f.getText().trim().isEmpty()) {
+                MessageBox.show("Hiba", "Minden mezőt ki kell tölteni!");
+                return false;
+            }
+        }
+
+        if (!isInt(inputZipCode, "Hibás irányítószám")) return false;
+
+        Customer newCustomer = new Customer(
+                inputName.getText().trim(),
+                inputZipCode.getText().trim(),
+                inputCity.getText().trim(),
+                inputStreet.getText().trim(),
+                inputHouseNumber.getText().trim(),
+                inputPhonenumber.getText().trim()
+        );
+
+        newCustomer.setOrder(this.cart);
+
+        System.out.println(this.cart);
+        System.out.println(newCustomer.toString());
+
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/finish.fxml"));
         btnFinish.getScene().setRoot(root);
+        return true;
+    }
+
+    private boolean isInt(TextField f, String msg) {
+        try {
+            Integer.parseInt(f.getText());
+            return true;
+        } catch(NumberFormatException e) {
+            MessageBox.show("Hiba", msg);
+            return false;
+        }
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 }

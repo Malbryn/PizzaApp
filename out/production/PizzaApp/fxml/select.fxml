@@ -146,7 +146,7 @@
         <VBox styleClass="boxColumn">
             <children>
                 <Label fx:id="cart" text="Kosár:"/>
-                <ListView fx:id="cartItems"/>
+                <ListView fx:id="itemList"/>
             </children>
         </VBox>
         <HBox styleClass="buttons">

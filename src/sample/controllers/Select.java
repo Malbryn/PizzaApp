@@ -27,7 +27,9 @@ public class Select {
     @FXML
     ToggleGroup groupStyle, groupSize, groupType;
     @FXML
-    ListView cartItems;
+    ListView itemList;
+
+    Cart cart = new Cart();
 
     public boolean addToCart(ActionEvent actionEvent) {
         if (groupStyle.getSelectedToggle() == null) {
@@ -46,7 +48,8 @@ public class Select {
         }
 
         Pizza newPizza = createPizza();
-        cartItems.getItems().add(newPizza.toString());
+        itemList.getItems().add(newPizza.toString());
+        cart.addOrder(newPizza);
 
         return true;
     }
@@ -75,8 +78,18 @@ public class Select {
         return customPizza;
     }
 
-    public void handleOrderPage(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/order.fxml"));
+    public boolean handleOrderPage(ActionEvent actionEvent) throws IOException {
+        if (cart.getOrder().size() == 0) {
+            MessageBox.show("Hiba", "Válaszd ki a rendelni kívánt pizzát!");
+            return false;
+        }
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/order.fxml"));
+        Parent root = (Parent) loader.load();
+        Order controller = loader.<Order>getController();
+        controller.setCart(this.cart);
         btnOrder.getScene().setRoot(root);
+
+        return true;
     }
 }

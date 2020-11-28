@@ -31,15 +31,15 @@
             <children>
                 <Label fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="1" text="Név:"/>
                 <TextField fx:id="inputName" GridPane.columnIndex="2" GridPane.rowIndex="1" text=""/>
-                <Label fx:id="zipcode" GridPane.columnIndex="1" GridPane.rowIndex="2" text="Irányítószám:"/>
-                <TextField fx:id="inputZipcode" GridPane.columnIndex="2" GridPane.rowIndex="2" text=""/>
+                <Label fx:id="zipCode" GridPane.columnIndex="1" GridPane.rowIndex="2" text="Irányítószám:"/>
+                <TextField fx:id="inputZipCode" GridPane.columnIndex="2" GridPane.rowIndex="2" text=""/>
                 <Label fx:id="city" GridPane.columnIndex="1" GridPane.rowIndex="3" text="Város:"/>
                 <TextField fx:id="inputCity" GridPane.columnIndex="2" GridPane.rowIndex="3" text=""/>
                 <Label fx:id="street" GridPane.columnIndex="1" GridPane.rowIndex="4" text="Utca:"/>
                 <TextField fx:id="inputStreet" GridPane.columnIndex="2" GridPane.rowIndex="4" text=""/>
-                <Label fx:id="number" GridPane.columnIndex="1" GridPane.rowIndex="5" text="Házszám:"/>
-                <TextField fx:id="inputNumber" GridPane.columnIndex="2" GridPane.rowIndex="5" text=""/>
-                <Label fx:id="phonenumber" GridPane.columnIndex="1" GridPane.rowIndex="6" text="Telefonszám:"/>
+                <Label fx:id="houseNumber" GridPane.columnIndex="1" GridPane.rowIndex="5" text="Házszám:"/>
+                <TextField fx:id="inputHouseNumber" GridPane.columnIndex="2" GridPane.rowIndex="5" text=""/>
+                <Label fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="6" text="Telefonszám:"/>
                 <TextField fx:id="inputPhonenumber" GridPane.columnIndex="2" GridPane.rowIndex="6" text=""/>
             </children>
         </GridPane>
