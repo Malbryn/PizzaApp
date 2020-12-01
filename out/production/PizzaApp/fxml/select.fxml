@@ -52,17 +52,17 @@
                         <fx:define>
                             <ToggleGroup fx:id="groupSize"/>
                         </fx:define>
-                        <RadioButton fx:id="sizeSmall" toggleGroup="$groupSize" text="Kicsi">
+                        <RadioButton fx:id="sizeSmall" toggleGroup="$groupSize" text="Kicsi (80% ár)">
                             <userData>
                                 <PizzaSize fx:constant="SMALL"/>
                             </userData>
                         </RadioButton>
-                        <RadioButton fx:id="sizeMedium" toggleGroup="$groupSize" text="Közepes">
+                        <RadioButton fx:id="sizeMedium" toggleGroup="$groupSize" text="Közepes (100% ár)">
                             <userData>
                                 <PizzaSize fx:constant="MEDIUM"/>
                             </userData>
                         </RadioButton>
-                        <RadioButton fx:id="sizeLarge" toggleGroup="$groupSize" text="Nagy">
+                        <RadioButton fx:id="sizeLarge" toggleGroup="$groupSize" text="Nagy (150% ár)">
                             <userData>
                                 <PizzaSize fx:constant="LARGE"/>
                             </userData>
@@ -75,32 +75,32 @@
                         <fx:define>
                             <ToggleGroup fx:id="groupType"/>
                         </fx:define>
-                        <RadioButton fx:id="typeMargherita" toggleGroup="$groupType" text="Margaréta">
+                        <RadioButton fx:id="typeMargherita" toggleGroup="$groupType" text="Margaréta (1200 Ft)">
                             <userData>
                                 <PizzaType fx:constant="MARGHERITA"/>
                             </userData>
                         </RadioButton>
-                        <RadioButton fx:id="typePepperoni" toggleGroup="$groupType" text="Szalámis">
+                        <RadioButton fx:id="typePepperoni" toggleGroup="$groupType" text="Szalámis (1350 Ft)">
                             <userData>
                                 <PizzaType fx:constant="PEPPERONI"/>
                             </userData>
                         </RadioButton>
-                        <RadioButton fx:id="typeMeat" toggleGroup="$groupType" text="Húsimádó">
+                        <RadioButton fx:id="typeMeat" toggleGroup="$groupType" text="Húsimádó (1400 Ft)">
                             <userData>
                                 <PizzaType fx:constant="MEAT"/>
                             </userData>
                         </RadioButton>
-                        <RadioButton fx:id="typeBBQ" toggleGroup="$groupType" text="BBQ">
+                        <RadioButton fx:id="typeBBQ" toggleGroup="$groupType" text="BBQ (1400 Ft)">
                             <userData>
                                 <PizzaType fx:constant="BBQ"/>
                             </userData>
                         </RadioButton>
-                        <RadioButton fx:id="typeHawaiian" toggleGroup="$groupType" text="Hawaii">
+                        <RadioButton fx:id="typeHawaiian" toggleGroup="$groupType" text="Hawaii (1350 Ft)">
                             <userData>
                                 <PizzaType fx:constant="HAWAIIAN"/>
                             </userData>
                         </RadioButton>
-                        <RadioButton fx:id="typeMushroom" toggleGroup="$groupType" text="Gombás">
+                        <RadioButton fx:id="typeMushroom" toggleGroup="$groupType" text="Gombás (1300 Ft)">
                             <userData>
                                 <PizzaType fx:constant="MUSHROOM"/>
                             </userData>
@@ -110,32 +110,32 @@
                 <VBox styleClass="boxColumn">
                     <children>
                         <Label fx:id="extra" text="Extra feltét"/>
-                        <CheckBox fx:id="extraPepperoni" text="Szalámi">
+                        <CheckBox fx:id="extraPepperoni" text="Szalámi (+150 Ft)">
                             <userData>
                                 <PizzaExtra fx:constant="PEPPERONI"/>
                             </userData>
                         </CheckBox>
-                        <CheckBox fx:id="extraBacon" text="Bacon">
+                        <CheckBox fx:id="extraBacon" text="Bacon (+250 Ft)">
                             <userData>
                                 <PizzaExtra fx:constant="BACON"/>
                             </userData>
                         </CheckBox>
-                        <CheckBox fx:id="extraOlives" text="Olívabogyó">
+                        <CheckBox fx:id="extraOlives" text="Olívabogyó (+100 Ft)">
                             <userData>
                                 <PizzaExtra fx:constant="OLIVES"/>
                             </userData>
                         </CheckBox>
-                        <CheckBox fx:id="extraHam" text="Sonka">
+                        <CheckBox fx:id="extraHam" text="Sonka (+150 Ft)">
                             <userData>
                                 <PizzaExtra fx:constant="HAM"/>
                             </userData>
                         </CheckBox>
-                        <CheckBox fx:id="extraCheese" text="Sajt">
+                        <CheckBox fx:id="extraCheese" text="Sajt (+100 Ft)">
                             <userData>
                                 <PizzaExtra fx:constant="CHEESE"/>
                             </userData>
                         </CheckBox>
-                        <CheckBox fx:id="extraOnion" text="Hagyma">
+                        <CheckBox fx:id="extraOnion" text="Hagyma (+100 Ft)">
                             <userData>
                                 <PizzaExtra fx:constant="ONION"/>
                             </userData>
