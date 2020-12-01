@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Home {
     @FXML
@@ -17,8 +18,11 @@ public class Home {
         btnSelect.getScene().setRoot(root);
     }
 
-    public void handleAdminPage(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/admin.fxml"));
+    public void handleAdminPage(ActionEvent actionEvent) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/admin.fxml"));
+        Parent root = (Parent) loader.load();
+        Admin controller = loader.<Admin>getController();
+        controller.listActiveOrders();
         btnAdmin.getScene().setRoot(root);
     }
 }

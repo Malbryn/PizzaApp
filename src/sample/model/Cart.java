@@ -52,4 +52,15 @@ public class Cart {
     public int getTotal() {
         return this.total;
     }
+
+    public String getOrderString() {
+        String orderString = "";
+
+        for (int i = 0; i < this.order.size(); i++) {
+            orderString += "(" + (i + 1) + ".) " + this.order.get(i).toString();
+            if (i != this.order.size() - 1) orderString += " /// ";
+        }
+
+        return orderString;
+    }
 }

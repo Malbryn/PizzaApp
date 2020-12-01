@@ -46,13 +46,11 @@ public class Order {
 
         newCustomer.setOrder(this.cart);
 
-        System.out.println(this.cart);
-        System.out.println(newCustomer.toString());
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/finish.fxml"));
         Parent root = (Parent) loader.load();
         Finish controller = loader.<Finish>getController();
         controller.setDeliveryTimeText();
+        controller.addToDatabase(newCustomer);
         btnFinish.getScene().setRoot(root);
 
         return true;
