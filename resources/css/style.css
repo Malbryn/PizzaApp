@@ -1,6 +1,5 @@
 * {
     -fx-font-family: 'Raleway Regular';
-    -fx-alignment: center;
 }
 
 #container {
@@ -9,6 +8,7 @@
     -fx-pref-height: 600px;
     -fx-padding: 40px;
     -fx-spacing: 15px;
+    -fx-alignment: center;
 }
 
 #title1 {
@@ -21,6 +21,7 @@
 
 .buttons {
     -fx-spacing: 20px;
+    -fx-alignment: center;
 }
 
 .button {
@@ -40,6 +41,10 @@
 .boxColumn {
     -fx-alignment: top-left;
     -fx-padding: 15px;
+}
+
+.total {
+    -fx-alignment: center;
 }
 
 .total > Text {
@@ -68,6 +73,7 @@ CheckBox {
 
 .boxRows {
     -fx-padding: 15px;
+    -fx-alignment: center;
 }
 
 GridPane > Label {

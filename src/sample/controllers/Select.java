@@ -16,7 +16,7 @@ import java.util.Arrays;
 
 public class Select {
     @FXML
-    private Button btnCart, btnOrder;
+    private Button btnCart, btnOrder, btnBack;
     @FXML
     private RadioButton styleThin, styleThick, styleStuffed;
     @FXML
@@ -85,7 +85,7 @@ public class Select {
 
     public boolean handleOrderPage(ActionEvent actionEvent) throws IOException {
         if (cart.getOrder().size() == 0) {
-            MessageBox.show("Hiba", "Válaszd ki a rendelni kívánt pizzát!");
+            MessageBox.show("Hiba", "Add hozzá a kosárhoz a rendelni kívánt pizzát!");
             return false;
         }
 
@@ -96,5 +96,10 @@ public class Select {
         btnOrder.getScene().setRoot(root);
 
         return true;
+    }
+
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
+        btnBack.getScene().setRoot(root);
     }
 }

@@ -152,6 +152,7 @@
         </VBox>
         <HBox styleClass="buttons">
             <children>
+                <Button fx:id="btnBack" text="Vissza" onAction="#handleBack"/>
                 <Button fx:id="btnCart" text="Kosárhoz hozzáad" onAction="#addToCart"/>
                 <Button fx:id="btnOrder" text="Tovább" onAction="#handleOrderPage"/>
             </children>
