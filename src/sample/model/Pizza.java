@@ -17,9 +17,8 @@ public class Pizza {
         this.price = this.calculatePrice();
     }
 
+    // A pizza árának kalkulációja: price = type * size + extra
     private int calculatePrice() {
-        // price = type * size + extra
-
         int basePrice = this.type.getPrice();
         double sizeCoeff = this.size.getPriceCoeff();
         int extra = 0;

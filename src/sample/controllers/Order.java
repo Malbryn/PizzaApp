@@ -21,6 +21,8 @@ public class Order {
     private TextField inputName, inputZipCode, inputCity, inputStreet, inputHouseNumber, inputPhonenumber;
     private Cart cart;
 
+    // Beolvassuk az input adatokat és példányosítjuk a Customer osztályt
+    // Váltunk a Finish jelenetre
     public boolean handleFinishPage(ActionEvent actionEvent) throws IOException {
         ArrayList<TextField> inputFields = new ArrayList<TextField>(
                 Arrays.asList(inputName, inputZipCode, inputCity, inputStreet, inputHouseNumber, inputPhonenumber)
@@ -56,6 +58,7 @@ public class Order {
         return true;
     }
 
+    // Integer vizsgálat segédmetódus
     private boolean isInt(TextField f, String msg) {
         try {
             Integer.parseInt(f.getText());

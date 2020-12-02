@@ -3,9 +3,9 @@ package sample.model;
 import java.util.ArrayList;
 
 public class Cart {
-    private ArrayList<Pizza> order;
-    private Customer customer;
-    private int total = 0;
+    private ArrayList<Pizza> order; // A megrendelt pizzák
+    private Customer customer; // Szállítási adatok
+    private int total = 0; // Végösszeg
 
     public Cart() {
         this.order = new ArrayList<>();
@@ -43,6 +43,7 @@ public class Cart {
         this.total += newPizza.getPrice();
     }
 
+    // Végösszeg kiszámítása
     private void calculateTotal() {
         for (Pizza p : this.order) {
             this.total += p.getPrice();

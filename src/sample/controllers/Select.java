@@ -34,6 +34,7 @@ public class Select {
 
     private Cart cart = new Cart();
 
+    // Validálás után a kiválasztott Pizza példányosítása és hozzáadása a Cart-hoz
     public boolean addToCart(ActionEvent actionEvent) {
         if (groupStyle.getSelectedToggle() == null) {
             MessageBox.show("Hiba", "Válassz tésztát!");
@@ -59,6 +60,7 @@ public class Select {
         return true;
     }
 
+    // Egyedi pizza létrehozása
     public Pizza createPizza() {
         ArrayList<CheckBox> extras = new ArrayList<CheckBox>(
                 Arrays.asList(extraPepperoni, extraBacon, extraOlives, extraHam, extraCheese, extraOnion)
@@ -83,6 +85,7 @@ public class Select {
         return customPizza;
     }
 
+    // Szállítási adatok jelenetre váltás
     public boolean handleOrderPage(ActionEvent actionEvent) throws IOException {
         if (cart.getOrder().size() == 0) {
             MessageBox.show("Hiba", "Add hozzá a kosárhoz a rendelni kívánt pizzát!");
@@ -98,6 +101,7 @@ public class Select {
         return true;
     }
 
+    // Home jelenetre váltás
     public void handleBack(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
         btnBack.getScene().setRoot(root);

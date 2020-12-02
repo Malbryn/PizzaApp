@@ -20,8 +20,10 @@ public class Finish {
     @FXML
     private Text timestamp;
 
+    // Várható kiszállítási idő (= 1 óra)
     private LocalDateTime deliveryTime = LocalDateTime.now().plusHours(1);
 
+    // Kiszállítási idő formázva
     public String getDeliveryTime() {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy.MM.dd. HH:mm", Locale.ROOT);
         String formatter = format.format(this.deliveryTime);
@@ -33,11 +35,13 @@ public class Finish {
         timestamp.setText(this.getDeliveryTime());
     }
 
+    // Kezdőlapra váltás
     public void handleHomePage(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
         btnHome.getScene().setRoot(root);
     }
 
+    // Felvisszük a rendelést az adatbázisba
     public void addToDatabase(Customer customer) {
         DatabaseConnection db = new DatabaseConnection("localhost", "pizzadelivery_db", "root", "");
         db.modify("INSERT INTO deliveries (timestamp, name, address, phone_number, order_list, total) VALUES (?, ?, ?, ?, ?, ?)",

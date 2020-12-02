@@ -21,18 +21,22 @@ public class Admin {
     @FXML
     private ListView currentOrders;
 
+    // Váltás a kezdőképernyőre
     public void handleHomePage(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
         btnHome.getScene().setRoot(root);
     }
 
+    // Az aktív megrendelések kilistázása (< 1 óra telt el a megrendelés óta)
     public void listActiveOrders() throws SQLException {
         DatabaseConnection db = new DatabaseConnection("localhost", "pizzadelivery_db", "root", "");
         ResultSet rs = db.query("SELECT timestamp, name, address, phone_number, order_list, total FROM deliveries");
 
         while (rs.next()) {
+            // Mostani idő
             Timestamp current = Timestamp.valueOf(LocalDateTime.now());
 
+            // Ha még csak 0 óra telt el, akkor még aktív a rendelés
             if (getTimestampDiff(rs.getTimestamp("timestamp"), current) == 0) {
                 currentOrders.getItems().add(
                         rs.getString("timestamp") + " - " +

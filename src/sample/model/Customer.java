@@ -6,6 +6,7 @@ public class Customer {
     private String phoneNumber;
     private Cart order;
 
+    // Példányosításkor a különböző address adatokat egy változóba összefűzzük
     public Customer(String name, String zipCode, String city,
                     String street, String houseNumber, String phoneNumber) {
         this.name = name;
