@@ -1,2 +1,2 @@
 # PizzaApp
- Pizza rendelő alkalmazás Java nyelven.
+ Pizza ordering app based on JavaFx.
